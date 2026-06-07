@@ -1,3 +1,5 @@
+@use 'foundations/colors' as *;
+
 @forward 'foundations/colors';
 @forward 'foundations/spacing';
 @forward 'foundations/typography';
@@ -5,3 +7,14 @@
 @forward 'foundations/shadows';
 @forward 'foundations/breakpoints';
 @forward 'foundations/z-index';
+
+// Focus ring
+$focus-ring-width: 2px;
+$focus-ring-offset: 2px;
+$focus-ring-style: solid;
+$focus-ring-color: $primary-600;
+
+@mixin focus-ring($color: $focus-ring-color) {
+  outline: $focus-ring-width $focus-ring-style $color;
+  outline-offset: $focus-ring-offset;
+}
