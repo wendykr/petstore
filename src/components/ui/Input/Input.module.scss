@@ -1,0 +1,65 @@
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: $spacing-xs;
+}
+
+.label {
+  font-size: $font-size-sm;
+  font-weight: $font-weight-medium;
+  color: $neutral-900;
+  display: flex;
+  gap: $spacing-xs;
+}
+
+.required {
+  color: $error-600;
+}
+
+.input {
+  width: 100%;
+  padding: $spacing-md $spacing-lg;
+  font-size: $font-size-sm;
+  font-family: inherit;
+  color: $neutral-900;
+  background: $white;
+  border: 1px solid $neutral-200;
+  border-radius: $radius-md;
+  outline: none;
+  transition: border-color 0.15s, box-shadow 0.15s;
+
+  &:focus {
+    border-color: $primary-500;
+    box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.15);
+  }
+
+  &:disabled {
+    background: $neutral-100;
+    color: $neutral-400;
+    cursor: not-allowed;
+    border-color: $neutral-200;
+  }
+
+  &:read-only {
+    background: $neutral-100;
+    cursor: default;
+  }
+
+  &.hasError {
+    border-color: $error-600;
+
+    &:focus {
+      box-shadow: 0 0 0 3px rgba(225, 29, 72, 0.15);
+    }
+  }
+}
+
+.error {
+  font-size: $font-size-xs;
+  color: $error-600;
+}
+
+.helper {
+  font-size: $font-size-xs;
+  color: $neutral-400;
+}
