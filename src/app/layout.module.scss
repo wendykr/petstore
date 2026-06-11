@@ -1,0 +1,14 @@
+.layout {
+  display: grid;
+  grid-template-columns: 1fr;
+  min-height: 100vh;
+
+  @media (min-width: $breakpoint-md) {
+    grid-template-columns: 280px 1fr;
+  }
+}
+
+.main {
+  padding: $spacing-3xl;
+  min-width: 0;
+}
